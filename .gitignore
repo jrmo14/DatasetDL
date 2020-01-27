@@ -4,3 +4,4 @@ venv
 *.jpg
 *.png
 core
+__pycache__
