@@ -1,0 +1,6 @@
+.idea
+data
+venv
+*.jpg
+*.png
+core
