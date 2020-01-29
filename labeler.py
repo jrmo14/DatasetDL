@@ -48,10 +48,11 @@ class Labeler:
         if not self.dataset_dir == "":
             self.move_files()
         label_dir = self.dataset_dir if not self.dataset_dir == "" else self.img_directory
-        with open(os.path.join(label_dir, "labels.txt"), "w") as label_file:
+        with open(os.path.join(label_dir, "labels.csv"), "w") as label_file:
+            label_file.write("file,label\n")
             for label in self.labels.keys():
                 for file in self.labels[label]:
-                    label_file.write(f"{file}: {label}\n")
+                    label_file.write(f"{file},{label}\n")
         print("Labels written")
 
     def move_files(self):
